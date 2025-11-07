@@ -29,7 +29,7 @@ const Experience = () => {
       title: 'SMS Services Marketing for Financial Institutions (SMFI) - Backend Developer',
       company: 'Atlas Computer Technology, Addis Ababa, Ethiopia',
       location: 'Addis Ababa, Ethiopia',
-      period: '2017 – 2021',
+      period: '2021 – 2023',
       description: `Customized and delivered backend services for SMS marketing tailored for financial institutions, including transactional messaging, bulk messaging, social media integration, and lottery services.`,
       achievements: [
         'Developed backend services with Java, Spring Boot, ActiveMQ, and microservices architecture',
@@ -45,7 +45,7 @@ const Experience = () => {
       title: 'Remittance Cybersource Integration',
       company: 'Atlas Computer Technology, Addis Ababa, Ethiopia',
       location: 'Addis Ababa, Ethiopia',
-      period: '2022 – 2023',
+      period: '2025 – current',
       description: `Implemented card-to-bank transfers using Cybersource SDK, including capture context, payer setup, enrollment, and validation for both frictionless and OTP challenge flows.`,
       achievements: [
         'Built secure, reliable payment processing workflows',

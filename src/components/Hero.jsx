@@ -2,13 +2,17 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, Download, ArrowDown } from 'lucide-react'
 
+
 const Hero = () => {
   const scrollToAbout = () => {
     document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-950 to-black pt-20">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-950 to-black pt-20 relative overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -24,7 +28,8 @@ const Hero = () => {
                 <span className="w-2 h-2 bg-green-500 rounded-full"></span>
                 Open to Remote Opportunities
               </div>
-              <motion.h1 
+
+              <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -39,7 +44,7 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-2xl lg:text-3xl font-medium text-gray-300"
               >
-                Software Developer & Backend Engineer
+                Software Developer
               </motion.h2>
 
               <motion.p
@@ -48,28 +53,32 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="text-lg text-gray-300 max-w-2xl leading-relaxed"
               >
-                Experienced in building secure and scalable banking and financial platforms. 
-                I specialize in Java, Spring Boot, Apache Camel, REST & SOAP APIs, WSO2 integration, 
-                and database management with MySQL and PostgreSQL. I leverage containerization, 
-                cloud deployment, and automated testing to deliver robust and reliable backend solutions.
+                Experienced Software Engineer specializing in secure and scalable fintech solutions.
+                Skilled in Java, Spring Boot, Apache Camel, Go, NestJS, and ReactJS.
+                Strong background in API integration, eCommerce, mobile banking, USSD, and remittance systems.
+                Passionate about cloud deployment, containerization, and building robust backend platforms.
               </motion.p>
             </div>
 
+            {/* Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button 
-                onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })} 
+              <button
+                onClick={() =>
+                  document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
+                }
                 className="btn-primary inline-flex items-center gap-2"
               >
                 <Mail size={20} />
                 Get In Touch
               </button>
+
               <a
-                href="/pdf/cv.pdf"
+                href="https://docs.google.com/document/d/1DACPZlABEMrp2OTphMISZ_lmN6n7aAvFXA-GAcUYIMY/edit?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary inline-flex items-center gap-2"
@@ -79,29 +88,30 @@ const Hero = () => {
               </a>
             </motion.div>
 
+            {/* Social Links */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.0 }}
               className="flex space-x-6"
             >
-              <a 
-                href="https://github.com/getukebebe7" 
-                target="_blank" 
+              <a
+                href="https://github.com/getukebebe7"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-primary-400 transition-colors duration-300"
               >
                 <Github size={24} />
               </a>
-              <a 
-                href="https://www.linkedin.com/in/getu-kebebe-a5858b22a/" 
-                target="_blank" 
+              <a
+                href="https://www.linkedin.com/in/getu-kebebe-a5858b22a/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-primary-400 transition-colors duration-300"
               >
                 <Linkedin size={24} />
               </a>
-              <a 
+              <a
                 href="mailto:getukebebe74@gmail.com"
                 className="text-gray-300 hover:text-primary-400 transition-colors duration-300"
               >
@@ -110,27 +120,24 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Laptop / Programmer Illustration */}
+          {/* Right Column - Rectangular Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex justify-center lg:justify-end"
           >
-            <div className="relative">
-              {/* Gradient Circle Background */}
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary-400 to-purple-500 flex items-center justify-center animate-float">
-                <div className="relative w-72 h-72 lg:w-[22rem] lg:h-[22rem] rounded-xl bg-white/10 backdrop-blur-sm overflow-hidden ring-1 ring-white/10 flex items-center justify-center">
-                  {/* Replace with programming/laptop illustration */}
-                  <img
-                    src="/images/programming-laptop.png"
-                    alt="Laptop with code"
-                    className="absolute inset-0 w-full h-full object-contain"
-                    loading="lazy"
-                    onError={(e) => { e.currentTarget.src = '/devops-avatar.svg' }}
-                  />
-                </div>
-              </div>
+            <div className="relative w-full max-w-lg h-auto overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/10 animate-float">
+              {/* Programming context image */}
+              <img
+                src="/images/developer-coding.jpeg"
+                alt="Developer working on code"
+                className="w-full h-auto object-cover"
+                loading="lazy"
+                onError={(e) => { e.currentTarget.src = '/images/fallback-coding.jpg' }}
+              />
+              {/* Optional overlay for modern effect */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
             </div>
           </motion.div>
         </div>

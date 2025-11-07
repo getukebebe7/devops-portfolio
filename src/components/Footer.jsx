@@ -50,8 +50,8 @@ const Footer = () => {
               Getu Kebebe
             </button>
             <p className="text-gray-400 mb-4 max-w-md">
-              DevOps Engineer passionate about building reliable, scalable infrastructure 
-              and helping teams deliver software faster and more securely.
+            Software Developer passionate about building efficient,
+            scalable, and secure applications while delivering high-quality software solutions.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -92,7 +92,7 @@ const Footer = () => {
             <div className="space-y-2 text-gray-400">
               <p>
                 <a 
-                  href="mailto:tedionabera@gmail.com"
+                  href="mailto:getukebebe74@gmail.com"
                   className="hover:text-white transition-colors duration-300"
                 >
                   getukebeb74@gmail.com

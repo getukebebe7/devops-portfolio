@@ -51,7 +51,7 @@ const Projects = () => {
       image: '📡'
     },
     {
-      title: 'Remittance Cybersource Integration',
+      title: 'Remittance Integration',
       description: 'Implemented card-to-bank transfer using Cybersource, including capture context, payer setup, enrollment, and validation for frictionless and OTP challenge flows.',
       icon: Shield,
       technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Redis', 'REST API', 'Cybersource SDK'],
@@ -65,6 +65,38 @@ const Projects = () => {
       github: '#',
       demo: '#',
       image: '💸'
+    },
+    {
+      title: 'PayPal Integration',
+      description: 'Implemented PayPal integration for secure payments, account management, and transaction tracking.',
+      icon: Cloud,
+      technologies: ['Java', 'Spring Boot', 'REST API', 'PayPal API', 'PostgreSQL', 'Docker', 'Kubernetes', 'Jenkins', 'ELK'],
+      features: [
+        'Secure account linking with PayPal',
+        'Check account status in real-time',
+        'Balance display and mini-statement generation',
+        
+      ],
+      github: '#',
+      demo: '#',
+      image: '💰'
+    }
+,    
+    {
+      title: 'E-commerce Platform',
+      description: 'Developed a full-featured e-commerce platform including product catalog, shopping cart, payment integration, and order management.',
+      icon: Cloud,
+      technologies: ['Java', 'Spring Boot', 'Hibernate', 'REST API', 'PostgreSQL', 'Redis', 'Docker', 'Kubernetes', 'Stripe API', 'React.js', 'Jenkins', 'ELK'],
+      features: [
+        'End-to-end e-commerce workflow: catalog, cart, checkout, orders',
+        'Secure payment integration and transaction handling',
+        'Optimized product search and recommendation engine',
+        'Containerized deployment with monitoring and logging',
+        'Scalable microservices architecture for high traffic'
+      ],
+      github: '#',
+      demo: '#',
+      image: '🛒'
     }
   ]
 
@@ -90,7 +122,7 @@ const Projects = () => {
         >
           <h2 className="text-4xl font-bold text-white mb-4">Projects</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Key projects demonstrating backend development, system integration, and DevOps expertise.
+            Key projects demonstrating backend development, system integration, e-commerce, and DevOps expertise.
           </p>
         </motion.div>
 

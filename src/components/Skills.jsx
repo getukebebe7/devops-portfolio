@@ -8,12 +8,13 @@ const Skills = () => {
       icon: Terminal,
       title: 'Backend & Programming',
       skills: [
-        'Java / Java EE',
-        'Spring Boot',
+        'Java 8+ / Java EE',
+        'Spring Boot & Spring Data',
         'Apache Camel',
         'Enterprise Java Beans (EJB)',
-        'OAuth 2.0',
-        'Java Messaging Service',
+        'REST & SOAP Services',
+        'OAuth 2.0 / JWT',
+        'JMS / Kafka / RabbitMQ',
         'Shell Scripting'
       ],
       color: 'from-teal-500 to-blue-500'
@@ -22,13 +23,12 @@ const Skills = () => {
       icon: Server,
       title: 'Databases & Messaging',
       skills: [
-        'MySQL',
-        'PostgreSQL',
-        'MongoDB',
-        'Redis',
+        'MySQL / PostgreSQL',
+        'MongoDB / Redis',
+        'Oracle',
         'ActiveMQ',
-        'RabbitMQ',
-        'Apache Kafka'
+        'Apache Kafka',
+        'Database Design & Optimization'
       ],
       color: 'from-orange-500 to-red-500'
     },
@@ -36,12 +36,12 @@ const Skills = () => {
       icon: Container,
       title: 'DevOps & CI/CD',
       skills: [
-        'Docker',
-        'Kubernetes',
-        'ArgoCD',
-        'Jenkins',
+        'Docker / Kubernetes',
+        'CI/CD Pipelines (Jenkins / ArgoCD)',
+        'Ansible / Terraform',
         'Linux Administration',
-        'CI/CD Automation'
+        'Infrastructure Automation',
+        'Monitoring (ELK, Prometheus/Grafana)'
       ],
       color: 'from-purple-500 to-pink-500'
     },
@@ -49,11 +49,11 @@ const Skills = () => {
       icon: Cloud,
       title: 'Web Services & Integration',
       skills: [
-        'WSO2 API',
-        'SOAP Web Services',
-        'RESTful Web Services (JAX-RS)',
-        'CXF',
-        'JAX-WS'
+        'RESTful APIs (JAX-RS)',
+        'SOAP Web Services (JAX-WS / CXF)',
+        'WSO2 API Management',
+        'Microservices & Event-driven Architecture'
+        
       ],
       color: 'from-blue-500 to-cyan-500'
     },
@@ -61,11 +61,10 @@ const Skills = () => {
       icon: GitBranch,
       title: 'Version Control & Project Management',
       skills: [
-        'Git',
-        'GitLab',
-        'OpenProject',
-        'JIRA',
-        'Atlassian Confluence'
+        'Git / GitHub / GitLab',
+        'JIRA / OpenProject',
+        'Confluence Documentation',
+        'Agile & Scrum Methodologies'
       ],
       color: 'from-green-500 to-emerald-500'
     },
@@ -73,10 +72,11 @@ const Skills = () => {
       icon: BarChart3,
       title: 'Frontend & Testing',
       skills: [
-        'React Framework',
+        'React.js / JSX',
         'Postman (Manual & Automation)',
-        'Newman',
-        'Selenium (Python scripts)'
+        'Selenium / Automation Scripts',
+        'Unit & Integration Testing',
+        'Newman / CI Testing Automation'
       ],
       color: 'from-indigo-500 to-purple-500'
     }
@@ -111,7 +111,7 @@ const Skills = () => {
         >
           <h2 className="text-4xl font-bold text-white mb-4">Technical Skills</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Tools and technologies I use to build, deploy, and operate scalable and secure systems
+            Tools and technologies I use to build, deploy, and operate scalable, secure, and high-performance systems
           </p>
         </motion.div>
 
@@ -123,7 +123,11 @@ const Skills = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {skillCategories.map((category) => (
-            <motion.div key={category.title} variants={itemVariants} className="bg-gray-900 rounded-xl shadow-lg p-6 card-hover border border-gray-800">
+            <motion.div
+              key={category.title}
+              variants={itemVariants}
+              className="bg-gray-900 rounded-xl shadow-lg p-6 card-hover border border-gray-800 hover:scale-105 transition-transform duration-300 relative overflow-hidden"
+            >
               <div className="flex items-center mb-6">
                 <div className={`bg-gradient-to-r ${category.color} rounded-lg p-3 mr-4`}>
                   <category.icon className="text-white" size={24} />
